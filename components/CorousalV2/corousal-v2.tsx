@@ -11,17 +11,20 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
   }, [current, isInView]);
 
   return (
-    <div className=' p-2  select-none 
+    <div className=' md:p-2  select-none 
     space-y-1 lg:space-y-2  
-    w-full mx-4 
+    w-full
+    md:mx-4 
     border-b border-b-[0.5vh]
     '
       onClick={() => setCurrent(feature.id)}>
       <p
         onMouseEnter={() => setShouldPlay(false)}
         onMouseLeave={() => setShouldPlay(true)}
-        className={`${current === feature.id ? "text-primaryBlue " : "text-lightGray"} font-bold duration-500 cursor-pointer 
-     text-sm md:text-md lg:text-sm xl:text-[16px]  text-center lg:text-start`}>{feature.title}</p>
+        className={`${current === feature.id ? "text-primaryBlue " : "text-lightGray"} 
+        font-bold duration-500 cursor-pointer 
+     text-sm md:text-md lg:text-sm xl:text-[16px]  
+     text-center lg:text-start`}>{feature.title}</p>
       <div>
 
    
@@ -42,7 +45,10 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
           onMouseEnter={() => setShouldPlay(false)}
           onMouseLeave={() => setShouldPlay(true)}
           key={feature.id}
-          className='w-full flex items-center justify-center min-h-[300px] mt-8 shadow-xl border border-primaryBlue rounded-md p-3'>
+          className='w-full flex items-center justify-center 
+          mx-auto
+          h-[200px] sm:min-h-[300px] mt-8 shadow-xl border border-primaryBlue 
+          rounded-md p-1 md:p-3'>
           <img
             src={"/featureImages/" + feature.image}
             alt={"/feature-image"}
@@ -113,9 +119,10 @@ export default function CourousalV2({featureList}:{
 
   return (
 
-    <div>
+    <div className='flex flex-col items-center'>
     <div className='  flex flex-col md:flex-row  
-                      w-full px-6 mx-auto
+                      w-full 
+                      md:px-6 mx-auto
                       items-center md:justify-center my-12
                       relative'
       ref={ref}
@@ -164,8 +171,9 @@ export default function CourousalV2({featureList}:{
         
       </div>
         
-      <div className='space-y-8 lg:space-y-[2vw] xl:space-y-[1.7vw] md:pl-12
-                  flex flex-col mr-10
+      <div className='space-y-8 lg:space-y-[2vw] xl:space-y-[1.7vw] 
+                  md:pl-12 md:mr-10
+                  flex flex-col 
                   w-full items-center
                   lg:ml-10 lg:w-[20%]  '>
         {

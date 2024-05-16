@@ -98,7 +98,7 @@ function WhyComp({subHeading,title,data,image}: Props) {
             <div className=' mx-auto md:w-[80%] px-6 md:px-12'>
             <img
                src={image}
-               className='h-[80vh] mx-auto w-auto'
+               className='max-h-[80vh] mx-auto w-auto'
                
                
 

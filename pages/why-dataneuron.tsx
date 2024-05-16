@@ -173,7 +173,9 @@ export default function WhyDN({ posts }: any) {
         </h2>
         <WhyDnComp />
         <Divider />
-        
+        <div className='sm:hidden'>
+          <Divider />
+        </div>
         <div className=' ' >
           <Row>
             <RowItem

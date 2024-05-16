@@ -78,17 +78,19 @@ const WhyDnComp: React.FC = () => {
                         <h2
                         className='text-primaryBlue 
                         w-full md:w-3/4 font-bold  text-start 
-                        text-[14px] md:text-[1.8vw] lg:text-[18px]
-                        md:tracking-tight 
-                        h-[55px] md:h-[75px]
+                        text-[12px] md:text-[1.8vw] lg:text-[18px]
+                        
+                        leading-tight md:leading-normal
+                        h-[60px] md:h-[75px]
 
                         '
                         >{c.title}</h2>
                         {/* Text */}
                         <p
                         className='text-[#7A7A7A] 
-                        
-                        text-[12px] md:text-[1.4vw] lg:text-[16px] w-[78%]  text-start'
+                        tracking-tight md:tracking-
+                        text-[12px] md:text-[1.4vw] lg:text-[16px] 
+                        md:w-[78%]  text-start'
                         >{c.text}</p>
                         
                     </div>)
