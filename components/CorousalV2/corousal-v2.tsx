@@ -47,7 +47,7 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
           key={feature.id}
           className='w-full flex items-center justify-center 
           mx-auto
-          h-[200px] sm:min-h-[300px] mt-8 shadow-xl border border-primaryBlue 
+          min-h-[200px] sm:min-h-[300px] mt-8 shadow-xl border border-primaryBlue 
           rounded-md p-1 md:p-3'>
           <img
             src={"/featureImages/" + feature.image}
