@@ -131,23 +131,27 @@ const Contact: NextPage<Posts> = ({ posts }) => {
       
 
           <form
-            className='flex-col flex justify-center
-                      sm:px-8 md:px-8      
-                      py-6
+            className=' flex-col flex justify-center
+                      md:px-8      
+                      py-12
                       rounded-xl 
                       md:h-[35rem]
                       text-sm text-[#292C33]  
                       space-y-4
-                      w-3/4
+                      w-full md:w-3/4
                       '>
             <h1
             className='font-bold 
-            text-[64px] text-center
-            my-12
+            h-full
+            leading-[8vh]
+            text-[40px] md:text-[5vw] lg:text-[64px] 
+            text-center
+            md:my-12 w-full
             '
             >Contact Us</h1>
             <p
-            className='text-[20px] text-center'
+            className='
+            text-[16px] md:text-[20px] text-center'
             >Reach out to us today and discover how DataNeuron can transform your LLM data curation and fine-tuning workflows.</p>
 
             <Input 
@@ -178,108 +182,7 @@ const Contact: NextPage<Posts> = ({ posts }) => {
             name={"organisation"}
             />
             
-            
-            {/* <div className='relative'>
-              <input
-                className={`
-              w-full pt-4 pb-3 my-4  px-3 peer   
-              border-2  rounded-md 
-                z-2
-                ${formik.touched.name && formik.errors.name ? 'text-red outline-red border-red' : "border-[#E0E0E0]"}
-                `}
-
-                type="text"
-                name={'name'}
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                onBlur={formik.handleBlur}
-              />
-              <span
-                className={`absolute text-sm  text-lightGray
-                left-2 px-[0.3rem]
-                peer-focus:opacity-100  top-2 left-2   bg-white
-                ${formik.touched.name && formik.errors.name ? 'text-red outline-red' : 'peer-focus:text-black'} z-0 
-      `}
-              >
-                {'Name'}
-              </span>
-            </div> */}
-            {/* <div className='relative'>
-              <input
-                className={`
-                  w-full pt-4 pb-3 my-4  px-3 peer   
-                  border-2  rounded-md 
-                    z-2
-                    ${formik.touched.email && formik.errors.email ? 'text-red outline-red border-red' : "border-[#E0E0E0]"}
-                    `}
-
-                type='email'
-                name="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-                onBlur={formik.handleBlur}
-              />
-              <span
-                className={`absolute text-sm  text-lightGray
-                 left-2 px-[0.3rem]
-                 peer-focus:opacity-100  top-2 left-2   bg-white
-                 ${formik.touched.email && formik.errors.email ? 'text-red outline-red' : 'peer-focus:text-black'} z-0 
-       `}        >
-                {'Email'}
-              </span>
-            </div> */}
-
-            {/* <div className='relative'>
-              <input
-                className={`
-           w-full pt-4 pb-3 my-4  px-3 peer   
-           border-2  rounded-md 
-             z-2
-             ${formik.touched.organisation && formik.errors.organisation ? 'text-red outline-red border-red' : "border-[#E0E0E0]"}
-             `}
-                type='text'
-
-                name="organisation"
-                onChange={formik.handleChange}
-                value={formik.values.organisation}
-                onBlur={formik.handleBlur}
-              />
-              <span
-                className={`absolute text-sm  text-lightGray
-                 left-2 px-[0.3rem]
-                 peer-focus:opacity-100  top-2 left-2   bg-white
-                 ${formik.touched.organisation && formik.errors.organisation ? 'text-red outline-red' : 'peer-focus:text-black'} z-0 
-       `}        >
-                {'Organisation'}
-              </span>
-            </div>
-
-            <div className='relative'>
-              <textarea
-
-
-                className={`py-3 px-3 my-4
-        w-full peer
-        rounded-md border-2 
-        resize-none
-        ${formik.touched.message && formik.errors.message ? 'text-red outline-red !border-red' : "border-[#E0E0E0]"}
-        `}
-                rows={6}
-                name="message"
-                onChange={formik.handleChange}
-                value={formik.values.message}
-                onBlur={formik.handleBlur}
-
-              />
-              <span
-                className={`absolute text-sm  text-lightGray
-                 left-2 px-[0.3rem]
-                 peer-focus:opacity-100  top-2 left-2   bg-white
-                 ${formik.touched.message && formik.errors.message ? 'text-red outline-red' : 'peer-focus:text-black'} z-0 
-       `}        >
-                {'Message'}
-              </span>
-            </div> */}
+ 
 
             <button
               className={`self-center lg:self-start 
@@ -314,10 +217,14 @@ const Contact: NextPage<Posts> = ({ posts }) => {
     >
       
 
-        <div className='flex justify-between items-center 
-        py-12 gap-12'>
+        <div className='flex 
+        flex-col md:flex-row
+        justify-between items-center 
+        md:py-12 gap-12'>
 
-          <div className='w-1/2
+          <div className='
+          w-3/4
+          md:w-1/2
           flex justify-center'>
             <Form />
           </div>
@@ -325,8 +232,10 @@ const Contact: NextPage<Posts> = ({ posts }) => {
           <div
             className='flex flex-col 
             justify-center items-start
-            space-y-7 px-32
-            h-[70vh] 
+            space-y-7 
+            py-12 md:py-2
+            px-12 md:px-32
+            h-full md:h-[70vh] 
             text-start text-white  md:text-lg 
             bg-primaryBlue
             

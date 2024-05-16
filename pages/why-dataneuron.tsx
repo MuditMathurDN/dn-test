@@ -173,6 +173,7 @@ export default function WhyDN({ posts }: any) {
         </h2>
         <WhyDnComp />
         <Divider />
+        
         <div className=' ' >
           <Row>
             <RowItem
