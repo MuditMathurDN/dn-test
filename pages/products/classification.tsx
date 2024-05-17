@@ -100,7 +100,11 @@ export default function classification({posts}:any) {
             <CourousalV2 
             featureList={featureList}
             />
+            <div 
+            className='w-full h-[100px]'
+            />
             </Container>
+            
          
            
            

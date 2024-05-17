@@ -60,14 +60,13 @@ function WhyComp({subHeading,title,data,image}: Props) {
                                 <div className='
                                 h-[30px] w-[30px] md:h-[65px] md:w-[65px]
                                 overflow-hidden
-                                p-[5px]
                                 flex item-center justify-center
                                 bg-primaryBlue rounded-full
                                 
                                 '>
                                 <img 
                                 src={d.icon}
-                                className={`object-contain w-full h-full`}
+                                className={`h-full scale-[135%] `}
                                 />
                                 </div>
                             </div>

@@ -9,6 +9,7 @@ import Container from './Container';
 import { getAllGhostPosts } from '../../lib/graphcms';
 import Image from 'next/image';
 import CourousalV2 from '../../components/CorousalV2/corousal-v2';
+import { Divider } from 'antd';
 
 const featureList = [
   {
@@ -98,6 +99,9 @@ export default function classification() {
 
             <CourousalV2 
             featureList={featureList}
+            />
+            <div
+            className='md:h-[15vh]'
             />
             </Container>
          

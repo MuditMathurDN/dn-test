@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react'
 
 type Props = {
     heading:string | ReactNode,
+    heading2?:string,
     subheading?:string,
     description:string,
     imageUrl:string,
@@ -14,6 +15,7 @@ type Props = {
 
 function Header({
     heading,
+    heading2,
     subheading,
     description,
     imageUrl,
@@ -22,48 +24,68 @@ function Header({
   return (
     
             
-         <section className="overflow-x-hidden w-screen max-w-[1800px] 
+         <section className="overflow-x-hidden 
+                            w-screen max-w-[1800px] 
                             md:h-[85vh] 
-                            
+                            text-[#292C33]
                             md:mx-auto 
+                            mt-[20px] md:mt-0
                             ">
             
            
             <div className=" md:h-full md:w-full 
-                
+                            gap-4
                             px-6 md:px-24
-                            flex flex-col md:flex-row gap-8 
+                            flex flex-col md:flex-row 
                             flex-col-reverse 
-                             
-                             justify-between items-between
-                             
+                            items-center
+                             md:justify-between md:items-between
                             place-items-start md:place-items-center
                             ">
 
             {/* Heading And SubHeading */}
-            <div className=' w-full text-center 
-                            md:text-start
+            <div className=' md:w-1/2 text-center 
+                            md:text-start 
+                            
                             tracking-tighter '>
                  
                     
+                    <div
+                    className='flex flex-row md:flex-col  
+                    items-center md:items-start 
+                    justify-center md:justify-center
+                    space-x-2'
+                    >
+
                     <h1
-                    className='text-[32px]  md:text-[100px] 
+                    className='text-[9vw]  
                     
                     md:mt-[16px]
-                    text-textGray
-                    font-bold  leading-tight '>
+                    
+                    font-bold leading-tight '>
                         {heading}
                     </h1>
+                    {heading2 && <h2
+                    className='font-bold 
+                    text-center md:text-start 
+                    text-[9vw]  md:text-[calc(5vw+1em)]
+                    md:-mt-[40px]
+                    '
+                    >{heading2}</h2>}
+                    </div>
                     <h2
-                    className='font-bold  md:text-start text-[14px]  md:text-[32px] 
-                    text-textGray'
+                    className='
+                    
+                    font-bold  text-center md:text-start 
+                    text-[calc(2.2vw+1em)] tracking-tighter 
+                    md:-mt-[30px]
+                    '
                     >{subheading}</h2>
 
                     
                     <p 
-                    className= {`md:text-left  md:mt-[30px]
-                                text-[#8A8A8A] 
-                                    text-[16px] md:text-2xl 
+                    className= {`md:text-left  md:mt-[30px] 
+                                    text-[12px] md:text-2xl 
                                     xl:w-[75%] ${paraStyles || ""} `}
                                  >{description}
                     </p>
@@ -72,10 +94,11 @@ function Header({
             </div>
 
             {/* Image */}
-            <div className='w-full '>
-            <motion.img
+            <div className='mx-auto flex justify-center
+             md:max-w-[55vw] 2xl:w-[500px]  '>
+            <img
                 src={imageUrl}
-                className='w-1/2 md:max-w-[35vw] mx-auto '
+                className='w-1/2 md:w-full  mx-auto '
                 />
             </div>
             </div>

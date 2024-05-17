@@ -67,7 +67,7 @@ const Row = ({children,height="lg"}:Props) => {
     ${height=="lg"?"h-[100vh] max-h-[880px]":"h-[70vh] max-h-[540px]"} 
     w-full relative`}
     >
-        <div className="hidden md:block absolute h-[90%] w-[90%] bg-red
+        <div className="hidden md:block absolute h-[90%] w-[90%]
                 bg-[#EFEFEF] rounded-md z-[1]  "
         />
 

@@ -124,7 +124,7 @@ const DesktopNav = ({ posts }: any) => {
         return <Link
             href={link}
         ><a
-            className='text-decorator-none text-[1.3vw]'
+            className='text-decorator-none text-[1.2vw] 2xl:text-[24px]'
             target={target ? target : undefined}>
                 {text}</a></Link>
 
@@ -173,7 +173,7 @@ const DesktopNav = ({ posts }: any) => {
                 
             </div>}
             <p
-                className='cursor-pointer select-none'
+                className='cursor-pointer select-none text-[1.2vw] 2xl:text-[24px]'
                 onClick={onClick}
             >{text}
             </p>

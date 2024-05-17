@@ -89,29 +89,38 @@ return (
               
                           px-6 md:px-24
                           grid md:grid-cols-2 
-                          place-items-start md:place-items-center
+                          
+                       
+                          justify-items-start
+                          content-center
+                          
                           ">
 
           {/* Heading And SubHeading */}
           <div className=' w-full text-center 
                           md:text-start
-                          tracking-tighter '>
+                          tracking-tighter
+                          col-span-2
+                          md:w-3/4
+                          
+                          '>
                
                   
                   <h1
                
                  
                   className='text-[14px]  md:text-[100px] 
-                  mt-[24px]
+                  mt-[24px] 
                   md:mt-[16px]
                   text-[#292C33]
-                  lg:font-semibold  leading-tight '>
+                  lg:font-bold  leading-tight '>
                       {heading}
                   </h1>
                   <h2
                   className='font-bold  text-start 
-                  px-2 md:px-0 text-[16px]  md:text-[32px] 
-                  text-textGray'
+                  px-2 md:px-0 text-[14x]  md:text-[3vw]
+                  2xl:text-[48px] 
+                  text-textGray font-[roboto]'
                   >{subheading}</h2>
 
                   

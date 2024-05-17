@@ -36,13 +36,13 @@ const Page2: React.FC = () => {
                             w-full xl:max-w-[1440px]
                             
                             grid grid-cols-2 md:grid-cols-4
-                            gap-8 px-6
+                            gap-8 
                             '>
            {
                 cards.map((c)=>{
                     return (<div 
                     key={c.title}
-                    className='flex-1'>
+                    className='flex-1 space-y-4'>
                         {/* Image */}
                         <div 
                         style={{
@@ -53,6 +53,7 @@ const Page2: React.FC = () => {
                         relative
                         h-[60px] w-[60px]
                         md:h-[80px] md:w-[80px]
+                       
                         
                         '>
                             <img 
@@ -64,12 +65,21 @@ const Page2: React.FC = () => {
                             <img src={c.image}
                             className='absolute rounded-full 
                             top-[5px] left-[5px] md:top-[8px] md:left-[8px]
-                            h-[50px] w-[50px] md:h-[65px] md:w-[65px]'
+                            h-[50px] w-[50px] md:h-[65px] md:w-[65px]
+                            
+                            '
                             />
                        
                         </div>
 
                         {/* Title */}
+                        <div
+                        className='md:border-l-2
+                        md:px-6 border-[#EAEAEA]
+                        h-[120px]
+                        '
+                        >
+                        
                         <h2
                         className='text-primaryBlue font-bold 
                            text-[14px] h-[5vh] md:text-[20px]
@@ -82,6 +92,7 @@ const Page2: React.FC = () => {
                         
                         text-[14px] md:text-[16px] md:w-[78%]  text-start'
                         >{c.text}</p>
+                        </div>
                     </div>)
                 })
            }

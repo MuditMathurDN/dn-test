@@ -59,7 +59,7 @@ const Expertise = () => {
                         border-b border-b-2 border-[#DEDEDE]
                         flex justify-between
                         cursor-pointer
-                        duration-200
+                        duration-500
                         ">
                             <p
                             className="text-sm md:text-lg w-[50%]  md:w-[35%]"

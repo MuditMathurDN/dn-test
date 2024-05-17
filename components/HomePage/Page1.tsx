@@ -38,7 +38,7 @@ const Page1: React.FC = () => {
     useEffect(()=>{
         const timer = setInterval(()=>{
             setActiveText(prev=>prev===text.length-1?0:prev+1);
-        },2000);
+        },3000);
 
         return ()=>clearInterval(timer);
 
@@ -58,10 +58,7 @@ const Page1: React.FC = () => {
               
                 {/* <Typewriter typeSpeed={70} words={["Power your Data for AI_"]} /> */}
 
-                <div className=' 
-                                
-                                
-                                '>
+                <div className=' '>
                     <div className='
                                     md:h-[calc(100vh-70px)] 
                                     flex flex-col items-start  md:justify-center 
@@ -69,27 +66,33 @@ const Page1: React.FC = () => {
                                     text-start 
                                     md:ml-[30px]
                                     '>
-                        <div className=' text-[6vw] lg:text-[50px] 2xl:text-[65px] text-black w-full gap-3
+                        <div className=' text-[6vw] text-black w-full gap-3
                                     font-bold font-[raleway]  leading-tight space-y-8
                                     '>
-                            <h1 className='text-[#555555]'>
+                            <h1 className='text-[#555555]
+                            text-[26px] md:text-[4.5vw]
+                            '>
                             Automate LLM data-curation, <br /> fine-tuning with 
                             <span className='text-primaryBlue'> DataNeuron</span>
                                
                             </h1>
                             <p
                             className='text-[14px] lg:text-[30px] 2xl:text-[50px]
-                            text-primaryGray '
+                            text-primaryGray
+                            font-[roboto] '
                             >
                                 The fastest/no-code platform to <br /> build enterprise-grade LLMs.
                             </p>
-                            <div className='mt-[8vh] font-medium flex space-x-1 items-center'>
+                            <div className='mt-[8vh] 
+                             text-[18px] md:text-[4vw]
+                            font-medium flex space-x-1 items-center'>
                                 <span className='text-[#2C2C2C]'>Data</span>
                                 <div
                                     className='
-                                        overflow-hidden text-primaryBlue'
+                                        
+                                        overflow-y-hidden text-primaryBlue'
                                         >
-                                    <AnimatePresence exitBeforeEnter>
+                                    <AnimatePresence exitBeforeEnter >
                                         <motion.div
                                         key={text[activeText]}
                                         initial={{ opacity: 0, y: 100 }}
@@ -98,6 +101,7 @@ const Page1: React.FC = () => {
              
                                         transition={{
                                         x: { type: "tween",ease:"easeInOut" },
+                                        duration:1
                 
                
                                         }}
@@ -110,7 +114,7 @@ const Page1: React.FC = () => {
                       
                         <div className='mt-[8vh] w-full flex   md:flex-row gap-[30px]'>
                             <Link
-                                href={"https://portal.dataneuron.ai/"}
+                                href={"/contact"}
                                 target="_blank">
                                 <div className=' text-primaryBlue 
                                         px-6  rounded-lg
