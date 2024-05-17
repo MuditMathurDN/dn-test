@@ -31,7 +31,8 @@ module.exports = {
         'black':"#000",
         'red':"#FF0000",
         'from':"#2575FC",
-        'to':"#6A11CB"
+        'to':"#6A11CB",
+        "text-black":"#1F232E"
       },
     
       gridTemplateColumns:{

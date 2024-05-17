@@ -11,15 +11,18 @@ const Footer: React.FC = () => {
 
     return <footer
     className=' bg-[#D9D9D9]
-    text-textGray
+    text-text-black
     font-[roboto] 
-    flex items-center justify-start md:justify-center
-    
-    md:h-[282px]
+    w-screen
+    md:h-[280px]
      py-12
     
     '
     >
+        <div
+        className=' flex items-center justify-start md:justify-center
+        '
+        >
         <div
         className=' w-full flex-col 
         md:flex-row flex items-start 
@@ -35,7 +38,7 @@ const Footer: React.FC = () => {
         className='h-full'
         >
                         <div className=' max-w-[200px] cursor-pointer '>
-                            <img className={`h-[30px] px-4 md:px-2`} src="/logo2.png" alt="dataneuron logo" />
+                            <img className={`h-[27px] px-4 md:px-2`} src="/logo_2.svg" alt="dataneuron logo" />
                         </div>
                     </Link>
 
@@ -75,7 +78,7 @@ const Footer: React.FC = () => {
                 <Link href="/humansofnlp">
                     <a target='_blank'>
                     <div className='my-2 cursor-pointer'>
-                        Humans Of NLP
+                        Humans of NLP
                     </div>
                     </a>
                 </Link>
@@ -84,7 +87,7 @@ const Footer: React.FC = () => {
         {/* Contact Us */}
         <div className='text-[14px]'>
                 <h2 className='text-[16px]'>Contact Us</h2>
-                <Link href="/products/classification">
+                <Link href="mailto:mail@dataneuron.ai">
                     <div className='my-2 cursor-pointer'>
                         
                     <a className='flex gap-2 ' href="mailto:mail@dataneuron.ai">
@@ -114,6 +117,27 @@ San Francisco CA 94107
                 
             </div>
 
+        </div>
+        </div>
+
+        <div className=' border-t border-black
+         flex justify-start md:justify-between
+         items-center
+         space-x-4
+         px-4 md:px-12
+        h-[40px]
+        '>
+            <div className='flex justify-center w-full'>
+                <p className='place-self-center text-center'>Copyright © 2024 Precily, Inc.</p>
+                
+                <div className=' flex items-center h-full'> <Link href="/privacy_policy">
+                        <div className='
+                        
+                        cursor-pointer'>
+                            Privacy Policy
+                        </div>
+                    </Link></div>
+            </div>
         </div>
 
     </footer>

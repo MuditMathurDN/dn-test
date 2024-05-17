@@ -24,10 +24,9 @@ const data = [{
 const Expertise = () => {
 
     return (
-        <Container
-        >
+            <>
             <div
-                className="text-[#555555] font-bold 
+                className="text-text- font-bold 
             flex items-start justify-between
             border-b border-b-3 border-[#DEDEDE]
             pb-8 md:pb-14
@@ -85,7 +84,8 @@ const Expertise = () => {
                     })
                 }
             </div>
-        </Container>
+            </>
+        
     )
 
 }

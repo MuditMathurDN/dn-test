@@ -4,12 +4,12 @@ import Head from 'next/head'
 
 //Local Modules
 import Navbar from './Navbar';
-import Footer from './Footer';
 import Sidebar from './Sidebar';
 import styles from '../../styles/Layout.module.css';
 
 import ScrollTop from './ScrollTop';
 import FunctionContext from '../context/functionContext';
+import Footer from '../Layout/Footer';
 
 //Interface for Props
 interface LayoutProps {

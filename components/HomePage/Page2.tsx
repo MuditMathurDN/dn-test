@@ -24,7 +24,7 @@ const cards  =[{
 const Page2: React.FC = () => {
     return (
 
-           <section className='font-[roboto]  
+           <section className='text-[roboto]  
           
            text-justify md:text-left
            max-w-[1800px] mx-auto
@@ -32,9 +32,9 @@ const Page2: React.FC = () => {
          
             <div className='my-[5vh] md:my-[20px]
                             md:text-justify
-                            font-[##777777] text-[24px] md:text-[25px]
+                             text-[24px] md:text-[24px]
                             w-full xl:max-w-[1440px]
-                            
+
                             grid grid-cols-2 md:grid-cols-4
                             gap-8 
                             '>
@@ -81,14 +81,17 @@ const Page2: React.FC = () => {
                         >
                         
                         <h2
-                        className='text-primaryBlue font-bold 
-                           text-[14px] h-[5vh] md:text-[20px]
+                        className='
+                        text-[roboto]
+                        text-primaryBlue font-bold 
+                           text-[14px] h-[5vh] md:text-[18px] 2xl:text-[20px]
+
                            text-start
                            '
                         >{c.title}</h2>
                         {/* Text */}
                         <p
-                        className='text-[#7A7A7A] 
+                        className='text-text-black 
                         
                         text-[14px] md:text-[16px] md:w-[78%]  text-start'
                         >{c.text}</p>

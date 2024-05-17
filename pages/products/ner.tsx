@@ -15,7 +15,7 @@ const featureList = [
   {
     id: 0,
     title: "Custom entities",
-    image: "ner-01.svg",
+    image: "ner/ner_01.svg",
     footer:{
       text:"DataNeuron supports creating domain specific entities for targeted Information Extraction. It also provides support to modify default model predictions for pre-defined entities."
     }
@@ -23,7 +23,7 @@ const featureList = [
   {
     id: 1,
     title: "Validation on predicted entities",
-    image: "ner-02.svg",
+    image: "ner/ner_02.svg",
     footer:{
       text:"Effortlessly validate predicted entities with DataNeuron's intuitive UI. Simply select or reject highlighted text, aided by contrasting colors for easy mapping. With an Active Learning approach, achieve state-of-the-art accuracy with less than 10% data validation."
     }
@@ -32,7 +32,7 @@ const featureList = [
   {
     id: 2,
     title: "Model training & deployment",
-    image: "ner-03.svg",
+    image: "ner/ner_03.svg",
     footer:{
       text:"DataNeuron streamlines the entire NLP model lifecycle, from preprocessing to deployment. It offers detailed training accuracy reports, real-time context-based predictions, and Masterlist suggestions for enhanced data preparation. Continuously manage and update the Masterlist for improved model performance and integrate prediction services seamlessly with APIs."
     }
@@ -98,6 +98,7 @@ export default function classification() {
             <Container>
 
             <CourousalV2 
+            footerHeight='120px'
             featureList={featureList}
             />
             <div

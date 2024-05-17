@@ -27,7 +27,7 @@ function Header({
          <section className="overflow-x-hidden 
                             w-screen max-w-[1800px] 
                             md:h-[85vh] 
-                            text-[#292C33]
+                            text-text-black font-[roboto]
                             md:mx-auto 
                             mt-[20px] md:mt-0
                             ">
@@ -57,14 +57,13 @@ function Header({
                     space-x-2'
                     >
 
-                    <h1
-                    className='text-[9vw]  
-                    
-                    md:mt-[16px]
-                    
-                    font-bold leading-tight '>
-                        {heading}
-                    </h1>
+                        <h1
+                        className='text-[8vw]  
+                        2xl:text-[160px]
+                        md:mt-[16px]
+                        font-bold leading-tight '>
+                            {heading}
+                        </h1>
                     {heading2 && <h2
                     className='font-bold 
                     text-center md:text-start 
@@ -77,7 +76,8 @@ function Header({
                     className='
                     
                     font-bold  text-center md:text-start 
-                    text-[calc(2.2vw+1em)] tracking-tighter 
+                    text-[calc(2.2vw+1em)] 
+                    tracking-tighter 
                     md:-mt-[30px]
                     '
                     >{subheading}</h2>

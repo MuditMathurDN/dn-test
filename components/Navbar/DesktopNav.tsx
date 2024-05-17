@@ -124,7 +124,8 @@ const DesktopNav = ({ posts }: any) => {
         return <Link
             href={link}
         ><a
-            className='text-decorator-none text-[1.2vw] 2xl:text-[24px]'
+            className='text-decorator-none 
+            text-[1.2vw] 2xl:text-[24px]'
             target={target ? target : undefined}>
                 {text}</a></Link>
 
@@ -148,7 +149,7 @@ const DesktopNav = ({ posts }: any) => {
                 className='space-y-2 px-2'
                 >
                     {
-                        ProductMenu.map((p)=>{
+                        ProductMenu.map((p,i)=>{
                             return <li
                             className='py-1'
                             key={p.title}
@@ -156,11 +157,11 @@ const DesktopNav = ({ posts }: any) => {
                                 <Link
                                 href={p.link}>
                                 <div
-                            className='text-center text-[#7A7A7A]
-                            text-[13px]
-                            border-b-[0.3vh] 
+                            className={`text-center text-[#7A7A7A]
+                            text-[13px] 
+                            ${i<ProductMenu.length-1 && "border-b-[0.3vh]"}  
                             border-[#DEDEDE] cursor-pointer
-                            '
+                            `}
                             >
                                 {p.title}
                             </div>
@@ -172,15 +173,23 @@ const DesktopNav = ({ posts }: any) => {
                 </ul>
                 
             </div>}
+            <div className='flex items-center
+            cursor-pointer select-none
+            '
+            onClick={onClick}
+            >
+
             <p
-                className='cursor-pointer select-none text-[1.2vw] 2xl:text-[24px]'
-                onClick={onClick}
+                className=' 
+                text-[1.2vw] 2xl:text-[24px]'
+                
             >{text}
             </p>
             <Image
                 src={ArrowDownSvg}
                 className={`${subMenu === "product" ? "rotate-180" : ""} duration-200`}
             />
+            </div>
         </div>
 
     }

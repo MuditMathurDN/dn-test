@@ -5,13 +5,13 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Container from '../../pages/products/Container';
 import Page2 from './Page2';
 import Page3 from './Page3';
+import Expertise from './expertise';
 
 //Main Component
 const Page1: React.FC = () => {
     const text = [
         "Labeled",
         "Curated",
-        "Fine Tuned"
 
     ];
     const [activeText, setActiveText] = useState<number>(0);
@@ -54,23 +54,27 @@ const Page1: React.FC = () => {
             <Container
             styles=''
             >
-            <div className='w-full h-full' >
+            <div className='w-full h-full space-y-12 md:space-y-24' >
               
                 {/* <Typewriter typeSpeed={70} words={["Power your Data for AI_"]} /> */}
 
                 <div className=' '>
                     <div className='
                                     md:h-[calc(100vh-70px)] 
-                                    flex flex-col items-start  md:justify-center 
+                                    flex flex-col items-start 
+                                    md:justify-center 
                                     z-[10]   
                                     text-start 
                                     md:ml-[30px]
+                                    !text-[roboto]
                                     '>
                         <div className=' text-[6vw] text-black w-full gap-3
-                                    font-bold font-[raleway]  leading-tight space-y-8
+                                    font-bold  leading-tight space-y-8
                                     '>
-                            <h1 className='text-[#555555]
-                            text-[26px] md:text-[4.5vw]
+                            <h1 className='text-text-black
+                            text-[26px] md:text-[4vw]
+                            text-[roboto]
+                            2xl:text-[74px]
                             '>
                             Automate LLM data-curation, <br /> fine-tuning with 
                             <span className='text-primaryBlue'> DataNeuron</span>
@@ -84,9 +88,9 @@ const Page1: React.FC = () => {
                                 The fastest/no-code platform to <br /> build enterprise-grade LLMs.
                             </p>
                             <div className='mt-[8vh] 
-                             text-[18px] md:text-[4vw]
+                             text-[18px] md:text-[3.5vw]
                             font-medium flex space-x-1 items-center'>
-                                <span className='text-[#2C2C2C]'>Data</span>
+                                <span className='text-text-black'>Data</span>
                                 <div
                                     className='
                                         
@@ -122,6 +126,7 @@ const Page1: React.FC = () => {
                                         h-10
                                         cursor-pointer border border-primaryBlue
                                         duration-200
+                                        text-san-serif
 
                                         '>
                                     Book demo
@@ -151,6 +156,9 @@ const Page1: React.FC = () => {
                 </div>
                 <Page2 />
                 <Page3 />
+                <div className=''>
+            <Expertise />
+        </div>
             </div>
             
 

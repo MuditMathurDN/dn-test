@@ -29,7 +29,7 @@ const Navbar = ({posts}:any) => {
                 <div className={` h-full `}>
                     <Link href='/'>
                         <div className=' h-full w-full flex items-center justify-center space-x-[0.2rem] cursor-pointer sm:pl-0 pl-5 sm:pr-0 pr-5'>
-                            <img className={`h-[32%]`} src="/logo2.png" alt="dataneuron logo" />
+                            <img className={`h-[40%]`} src="/logo_2.svg" alt="dataneuron logo" />
                         </div>
                     </Link>
                 </div>

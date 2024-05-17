@@ -27,9 +27,7 @@ const Home: React.FC<Posts> = ({ posts }) => {
         <div className=''>
             <Page1 />
         </div>
-        <div className='-mt-12 md:mt-0'>
-            <Expertise />
-        </div>
+        
       
     </div>
 }

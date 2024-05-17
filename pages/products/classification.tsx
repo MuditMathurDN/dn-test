@@ -13,7 +13,7 @@ const featureList = [
   {
     id: 0,
     title: "Taxonomy based masterlist",
-    image: "c-01.svg",
+    image: "classification/c_01.svg",
     footer:{
       text:"DataNeuron's Taxonomy Based Masterlist offers a simplified approach to machine learning, allowing for class overlap and eliminating the need for complex labeling functions. Advanced Masterlist feature assists in creating personalized, accurate Masterlists, with analysis and suggestions for improvement."
     }
@@ -21,7 +21,7 @@ const featureList = [
   {
     id: 1,
     title: "Multiclass and Multilabel ",
-    image: "c-02.svg",
+    image: "classification/c_02.svg",
     footer:{
       text:"DataNeuron streamlines multiclass and multilabel text classification, automating data labeling and model management. It employs a multi-user voting system and active learning to minimize bias and errors, reducing validation time by up to 95% along with auto-validation based on accuracy to further reduce human effort."
     }
@@ -29,7 +29,7 @@ const featureList = [
   {
     id: 2,
     title: "Model comparison & model training",
-    image: "c-03.svg",
+    image: "classification/c_03.svg",
     footer:{
       text:"DataNeuron offers a no-code, automated platform with customizable model building capabilities. Users can compare ML models easily, adjust hyperparameters, and achieve rapid convergence. With workflow versioning and iterative training, it ensures accuracy and mitigates data and model drift. Once the model deployment is complete the model API's will be available for inferencing."
     }
@@ -37,7 +37,7 @@ const featureList = [
   {
     id: 3,
     title: "LLM fine-tuning",
-    image: "c-04.svg",
+    image: "classification/c_04.svg",
     footer:{
       text:"DataNeuron utilizes leading industrial methods like PEFT and DPO for fine-tuning LLMs with minimal data and resources. Additionally, multiple LLMs are onboarded on the platform for quick comparison and fine-tuning with a no-code workflow."
     }
@@ -99,6 +99,7 @@ export default function classification({posts}:any) {
 
             <CourousalV2 
             featureList={featureList}
+            footerHeight='120px'
             />
             <div 
             className='w-full h-[100px]'

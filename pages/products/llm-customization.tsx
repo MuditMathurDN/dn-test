@@ -17,7 +17,7 @@ const featureList = [
   {
     id: 0,
     title: "Prompt generation ",
-    image: "llm-01.svg",
+    image: "llm/llm1.svg",
     footer: {
       text: "Hardest part of fine-tuning AI model is figuring out how to generate prompts effectively. To help with this DataNeuron supports auto generation of diverse and optimized prompts accelerating the fine-tuning, enhancing the model performance, and easing human workload for entire LLM customization."
     }
@@ -25,10 +25,10 @@ const featureList = [
   {
     id: 1,
     title: "Prompt annotation",
-    image: "llm-02.svg",
+    image: "llm/llm2.svg",
     footer: {
       text: ()=>{
-        return <div className=' text-[8px] md:text-[10px] lg:text-[14px]'>
+        return <div className=' text-[8px] md:text-[10px] lg:text-[14px] 2xl:text-[16px]'>
           <p>Our platform offers three efficient prompt validation methods to streamline your data curation process :</p>
           <ul>
             <li className='flex space-x-2'>
@@ -50,16 +50,16 @@ const featureList = [
   },
   {
     id: 2,
-    title: "Model comparison & model training",
-    image: "llm-03.svg",
+    title: "Model fine tuning",
+    image: "llm/llm3.svg",
     footer: {
       text: "DataNeuron offers a no-code, automated platform with customizable model building capabilities. Users can compare ML models easily, adjust hyperparameters, and achieve rapid convergence. With workflow versioning and iterative training, it ensures accuracy and mitigates data and model drift. Once the model deployment is complete the model API's will be available for inferencing."
     }
   },
   {
     id: 3,
-    title: "Model training & deployment",
-    image: "llm-04.svg",
+    title: "RAG (Retrieval augmented generation)",
+    image: "llm/llm4.svg",
     footer: {
       text: "DataNeuron streamlines the entire NLP model lifecycle, from preprocessing to deployment. It offers detailed training accuracy reports, real-time context-based predictions, and Masterlist suggestions for enhanced data preparation. Continuously manage and update the Masterlist for improved model performance and integrate prediction services seamlessly with APIs."
     }
@@ -126,6 +126,7 @@ export default function llmCustomization() {
           <CourousalV2
             featureList={featureList}
             contain={true}
+            footerHeight='170px'
           />
         </Container>
       

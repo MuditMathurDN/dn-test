@@ -87,7 +87,7 @@ return (
          
           <div className=" md:h-full md:w-full 
               
-                          px-6 md:px-24
+                          px-6 md:px-12
                           grid md:grid-cols-2 
                           
                        
@@ -112,7 +112,7 @@ return (
                   className='text-[14px]  md:text-[100px] 
                   mt-[24px] 
                   md:mt-[16px]
-                  text-[#292C33]
+                  text-text-black
                   lg:font-bold  leading-tight '>
                       {heading}
                   </h1>
@@ -120,15 +120,15 @@ return (
                   className='font-bold  text-start 
                   px-2 md:px-0 text-[14x]  md:text-[3vw]
                   2xl:text-[48px] 
-                  text-textGray font-[roboto]'
+                  text-text-black font-[roboto]'
                   >{subheading}</h2>
 
                   
                   <p 
                   className= {`text-left  mt-[30px] !font-roboto
                                   text-[16px] md:text-2xl 
-                                  xl:w-[75%] ${paraStyles || ""} `}
-                               >{description}
+                                  xl:w-[75%] ${paraStyles || ""} `}>
+                                    {description}
                   </p>
                
               
@@ -175,7 +175,7 @@ export default function WhyDN({ posts }: any) {
 
         styles='bg-bgGray space-y-12'>
         <h2
-          className='text-[#292C33] 
+          className='text-text-black 
            md:text-[24px] 
           md:-mt-12 md:mb-12'>
           Wonder why we are better than the rest?

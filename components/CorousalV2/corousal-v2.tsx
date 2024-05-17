@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useAnimationFrame, useTime } from 'framer-motion';
 import useInViewport from '../hooks/useInView';
-import { createYield } from 'typescript';
 
 const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent }: any) => {
   // console.log("feature",feature);
@@ -11,19 +10,31 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
   }, [current, isInView]);
 
   return (
-    <div className=' md:p-2  select-none 
-    space-y-1 lg:space-y-2  
+    <div className={`md:p-2  select-none 
+    space-y-1 lg:space-y-4  
     w-3/4
     md:mx-4 
-    border-b border-b-[0.5vh]
-    '
+    ${current !== feature.id && "border-b border-b-[0.5vh]"}
+    relative
+    `}
       onClick={() => setCurrent(feature.id)}>
+        {current === feature.id && <div
+          className='absolute bottom-0  left-[1px]
+            h-1 origin-left 
+            rounded-br-md rounded-bl-md 
+            bg-primaryBlue place-self-start'
+          style={{
+            width: `${progress}%`,
+          }}
+        >
+
+        </div>}
       <p
         onMouseEnter={() => setShouldPlay(false)}
         onMouseLeave={() => setShouldPlay(true)}
         className={`${current === feature.id ? "text-primaryBlue " : "text-lightGray"} 
         font-bold duration-500 cursor-pointer 
-      text-[16px] md:text-[calc(0.85vw+1px)]   
+      text-[16px] md:text-[calc(1vw+1px)]    
      text-center lg:text-start`}>{feature.title}</p>
       
       {current === feature.id && isInView && <div className=' relative lg:hidden'>
@@ -42,7 +53,8 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
           onMouseEnter={() => setShouldPlay(false)}
           onMouseLeave={() => setShouldPlay(true)}
           key={feature.id}
-          className='w-full flex items-center justify-center 
+          className='w-full 
+          flex items-center justify-center 
           mx-auto
           min-h-[200px] sm:min-h-[300px] mt-8 shadow-xl border border-primaryBlue 
           rounded-md p-1 md:p-3'>
@@ -58,9 +70,12 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
   )
 }
 
-export default function CourousalV2({ featureList,contain }: {
+export default function CourousalV2({ featureList,
+  contain,
+  footerHeight= "140px" }: {
   featureList: any[],
-  contain?:boolean
+  contain?:boolean,
+  footerHeight:string 
 }) {
 
   const [current, setCurrent] = useState<number>(0);
@@ -118,18 +133,52 @@ export default function CourousalV2({ featureList,contain }: {
   return (
 
     <div className='flex flex-col 
-    md:h-[100vh] max-h-[1200px]  lg:max-h-[1600px]
-    items-start justify-start relative '>
+    h-[100vh] max-h-[800px] 
+    items-center justify-start relative  
+    
+    '>
+        {/* Bottom Info Box */}
+        <div className="
+          hidden lg:block 
+          absolute left-0
+          -bottom-[60px] 
+          w-[80%] 
+          z-[40]
+          md:pl-[12vw] 
+           space-y-4">
+        <h2
+          className='text-[14px] text-[24px] lg:text-[32px] font-bold text-primaryBlue'
+        > {featureList[current].title}
+        </h2>
+
+        <p
+        style={{
+          height:footerHeight
+        }}
+          className={`
+          text-[8px] md:text-[10px] lg:text-[16px] 
+          w-full
+          
+          border border-primaryBlue rounded-md p-4
+          text-textGray
+          bg-white
+          whitespace-pre-wrap
+      `}>
+          {typeof featureList[current].footer.text === "string" ?
+            featureList[current].footer.text : React.createElement(featureList[current].footer.text)}
+        </p>
+        </div>
       
       <div
         className='hidden md:block absolute
-      h-[80vh] max-h-[660px] w-full bg-[#EFEFEF]
-      top-[10vw]
-      rounded-md 
+      h-[80vh] max-h-[660px] w-[80%]  bg-[#EFEFEF]
+      top-[100px]
+      rounded-md
       '
       />
+      
 
-      <div className='  flex flex-col md:flex-row  
+      <div className='flex flex-col md:flex-row  
                       w-full 
                       md:px-6 mx-auto
                       items-center md:justify-center 
@@ -139,11 +188,13 @@ export default function CourousalV2({ featureList,contain }: {
       >
 
         <div className={`hidden lg:flex my-auto 
-                        ${contain?"w-[100%]":"w-[70%]"} 
-                        h-[50vh] min-h-[500px]
+                        w-full
+                        h-[50vh] w-[68%] min-h-[500px]
                         flex-col items-center justify-center
-                        relative`}>
-
+                        relative
+                        
+                        `}>
+          
           <motion.img
             key={current}
             onMouseEnter={() => setShouldPlay(false)}
@@ -151,43 +202,32 @@ export default function CourousalV2({ featureList,contain }: {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: transitionTime, type: "linear" }}
-            className={`-mt-[1vw]  
-              z-50 
-              ${contain?"w-[60%] h-full":"h-[90%] max-w-[85%]"}
-              aspect-video`}
-            src={"/featureImages/" + featureList.find((f) => f.id === current)?.image} />
-          <div className='absolute 
-        h-[90%] w-[65%] 
-        -z-2
-        rounded-md
-        bg-white 
-        
-        border-b-8 border-4
-        
-        
-        ' >
+            className={`max-h-[70vh] w-full  aspect-video
+              z-50 `}
+            src={"/featureImages/" + featureList.find((f) => f.id === current)?.image} 
+            />
             <div
-              className='absolute -bottom-2 
-              -left-[3px]  
-            h-2 origin-left z-[50]
-            rounded-br-md rounded-bl-md 
+            className='absolute
+            bottom-[73px] z-[40] left-[73px]
+            w-[72%]
+            '
             
-            bg-primaryBlue place-self-start'
-              style={{
-                width: `${progress}%`,
-              }}
-            >
-
-
+            >                
             </div>
-          </div>
 
-        </div>
+            
+         
+            
+            </div>
+          
+
+          {/* Bg And Progress */}
+       
 
           {/* Sidebar */}
         <div className='items-center lg:items-start 
-                  space-y-8 md:space-y-[1vw]
-                  pt-[10vw]
+                  space-y-8 md:space-y-8
+                  pt-[10vw] 
                   flex flex-col 
                   w-full 
                   lg:w-[20%]  '>
@@ -217,29 +257,7 @@ export default function CourousalV2({ featureList,contain }: {
         
       </div>
 
-      {/* Bottom Info Box */}
-      <div className="w-full 
-          z-[40]
-           
-          md:pl-[12vw]
-          md:w-[70%] space-y-4">
-        <h2
-          className='text-[14px] text-[24px] lg:text-[32px] font-bold text-primaryBlue'
-        >{featureList[current].title}</h2>
-        <p
-          className='
-      text-[8px] md:text-[10px] lg:text-[16px]
-      h-[195px]
-      border border-primaryBlue rounded-md p-4
-      text-textGray
-      bg-white
-      whitespace-pre-wrap
-      '
-        >
-          {typeof featureList[current].footer.text === "string" ?
-            featureList[current].footer.text : React.createElement(featureList[current].footer.text)}
-        </p>
-      </div>
+      
     
     </div>
 
