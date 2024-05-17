@@ -46,7 +46,8 @@ const Gallery = ({images}:Props)=>{
                 
                
               }}
-             className=" max-h-[200px] md:max-h-[20vh] lg:max-h-[300px]  mx-auto object-cover"
+             className=" max-h-[200px] md:max-h-[20vh] lg:max-h-[300px] 
+              mx-auto object-cover"
             
             />
         </AnimatePresence>

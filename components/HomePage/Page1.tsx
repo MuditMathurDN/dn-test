@@ -10,8 +10,8 @@ import Expertise from './expertise';
 //Main Component
 const Page1: React.FC = () => {
     const text = [
-        "Labeled",
         "Curated",
+        "Validated",
 
     ];
     const [activeText, setActiveText] = useState<number>(0);
@@ -38,7 +38,7 @@ const Page1: React.FC = () => {
     useEffect(()=>{
         const timer = setInterval(()=>{
             setActiveText(prev=>prev===text.length-1?0:prev+1);
-        },3000);
+        },3500);
 
         return ()=>clearInterval(timer);
 
@@ -69,11 +69,11 @@ const Page1: React.FC = () => {
                                     !text-[roboto]
                                     '>
                         <div className=' text-[6vw] text-black w-full gap-3
-                                    font-bold  leading-tight space-y-8
+                                      leading-tight space-y-8
                                     '>
                             <h1 className='text-text-black
                             text-[26px] md:text-[4vw]
-                            text-[roboto]
+                            text-[roboto] font-semibold
                             2xl:text-[74px]
                             '>
                             Automate LLM data-curation, <br /> fine-tuning with 
@@ -81,9 +81,11 @@ const Page1: React.FC = () => {
                                
                             </h1>
                             <p
+                           
                             className='text-[14px] lg:text-[30px] 2xl:text-[50px]
-                            text-primaryGray
-                            font-[roboto] '
+                            text-text-black
+                            font-medium
+                            !text-[roboto] '
                             >
                                 The fastest/no-code platform to <br /> build enterprise-grade LLMs.
                             </p>
@@ -99,9 +101,9 @@ const Page1: React.FC = () => {
                                     <AnimatePresence exitBeforeEnter >
                                         <motion.div
                                         key={text[activeText]}
-                                        initial={{ opacity: 0, y: 100 }}
+                                        initial={{ opacity: 0, y: 80 }}
                                         animate={{ opacity: 1,y:0 }}
-                                        exit={{ opacity: 0,y:-100 }}
+                                        exit={{ opacity: 0,y:-80 }}
              
                                         transition={{
                                         x: { type: "tween",ease:"easeInOut" },

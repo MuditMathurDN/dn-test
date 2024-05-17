@@ -12,7 +12,8 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
   return (
     <div className={`md:p-2  select-none 
     space-y-1 lg:space-y-4  
-    w-3/4
+    
+    w-full
     md:mx-4 
     ${current !== feature.id && "border-b border-b-[0.5vh]"}
     relative
@@ -34,7 +35,7 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
         onMouseLeave={() => setShouldPlay(true)}
         className={`${current === feature.id ? "text-primaryBlue " : "text-lightGray"} 
         font-bold duration-500 cursor-pointer 
-      text-[16px] md:text-[calc(1vw+1px)]    
+      text-[16px] md:text-[calc(1.3vw+1px)]    
      text-center lg:text-start`}>{feature.title}</p>
       
       {current === feature.id && isInView && <div className=' relative lg:hidden'>
@@ -56,7 +57,8 @@ const Title = ({ feature, current, setShouldPlay, isInView, progress, setCurrent
           className='w-full 
           flex items-center justify-center 
           mx-auto
-          min-h-[200px] sm:min-h-[300px] mt-8 shadow-xl border border-primaryBlue 
+          min-h-[200px] sm:min-h-[300px] mt-8 shadow-xl 
+          border border-primaryBlue 
           rounded-md p-1 md:p-3'>
           <img
             src={"/featureImages/" + feature.image}
@@ -134,18 +136,22 @@ export default function CourousalV2({ featureList,
 
     <div className='flex flex-col 
     h-[100vh] max-h-[800px] 
+    my-[50px]
     items-center justify-start relative  
     
     '>
         {/* Bottom Info Box */}
         <div className="
           hidden lg:block 
-          absolute left-0
+          absolute 
+          -left-[3%]
+          2xl:-left-[10%]
+          2xl:-bottom-[120px]
           -bottom-[60px] 
-          w-[80%] 
+          w-[80%]  
           z-[40]
           md:pl-[12vw] 
-           space-y-4">
+          ">
         <h2
           className='text-[14px] text-[24px] lg:text-[32px] font-bold text-primaryBlue'
         > {featureList[current].title}
@@ -171,7 +177,9 @@ export default function CourousalV2({ featureList,
       
       <div
         className='hidden md:block absolute
-      h-[80vh] max-h-[660px] w-[80%]  bg-[#EFEFEF]
+      h-[80vh] 2xl:h-[70vh]
+      w-[95%]
+      bg-[#EFEFEF]
       top-[100px]
       rounded-md
       '
@@ -181,16 +189,18 @@ export default function CourousalV2({ featureList,
       <div className='flex flex-col md:flex-row  
                       w-full 
                       md:px-6 mx-auto
-                      items-center md:justify-center 
+                      items-center md:justify-start
+                       
                       relative'
         ref={ref}
 
       >
 
         <div className={`hidden lg:flex my-auto 
+                        
                         w-full
-                        h-[50vh] w-[68%] min-h-[500px]
-                        flex-col items-center justify-center
+                        h-[50vh] w-[75%] min-h-[500px]
+                        flex-col items-start justify-center
                         relative
                         
                         `}>
@@ -202,8 +212,9 @@ export default function CourousalV2({ featureList,
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: transitionTime, type: "linear" }}
-            className={`max-h-[70vh] w-full  aspect-video
-              z-50 `}
+            className={`max-h-[75vh] w-full
+              z-50 
+              `}
             src={"/featureImages/" + featureList.find((f) => f.id === current)?.image} 
             />
             <div

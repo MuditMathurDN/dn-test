@@ -34,7 +34,6 @@ const Page2: React.FC = () => {
                             md:text-justify
                              text-[24px] md:text-[24px]
                             w-full xl:max-w-[1440px]
-
                             grid grid-cols-2 md:grid-cols-4
                             gap-8 
                             '>
@@ -49,22 +48,23 @@ const Page2: React.FC = () => {
                             backgroundImage:"/landingpagegif/Ellipse 364.svg"
                         }}
                         className='rounded-full overflow-hidden 
-                        p-1 md:p-2
+                        ml-4
                         relative
                         h-[60px] w-[60px]
                         md:h-[80px] md:w-[80px]
+                        
                        
                         
                         '>
                             <img 
                             className='absolute h-full w-full 
-                            top-0 left-0'
+                            top-0 left-[5px]'
                             src="/landingpagegif/Ellipse 364.svg"
                             />  
                       
                             <img src={c.image}
                             className='absolute rounded-full 
-                            top-[5px] left-[5px] md:top-[8px] md:left-[8px]
+                            top-[5px] left-[5px] md:top-[8px] md:left-[10px]
                             h-[50px] w-[50px] md:h-[65px] md:w-[65px]
                             
                             '

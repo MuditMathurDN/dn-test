@@ -50,7 +50,7 @@ const featureList = [
   },
   {
     id: 2,
-    title: "Model fine tuning",
+    title: "Model fine-tuning",
     image: "llm/llm3.svg",
     footer: {
       text: "DataNeuron offers a no-code, automated platform with customizable model building capabilities. Users can compare ML models easily, adjust hyperparameters, and achieve rapid convergence. With workflow versioning and iterative training, it ensures accuracy and mitigates data and model drift. Once the model deployment is complete the model API's will be available for inferencing."

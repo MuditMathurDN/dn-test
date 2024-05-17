@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               className='w-4 h-4'
               alt="dataneuron office location" />
               HQ - 355 Bryant Street, Suite # 403, 
-San Francisco CA 94107
+              San Francisco CA 94107
                     </div>
                 </div>
                 
@@ -121,23 +121,24 @@ San Francisco CA 94107
         </div>
 
         <div className=' border-t border-black
-         flex justify-start md:justify-between
+         flex flex-col md:flex-row justify-start md:justify-between
          items-center
          space-x-4
          px-4 md:px-12
-        h-[40px]
+         py-[20px]
+         h-[40px]
         '>
-            <div className='flex justify-center w-full'>
+        <div className='flex justify-between px-[25%] w-full'>
                 <p className='place-self-center text-center'>Copyright © 2024 Precily, Inc.</p>
                 
-                <div className=' flex items-center h-full'> <Link href="/privacy_policy">
+                <div className=' flex items-center h-full '> <Link href="/privacy_policy">
                         <div className='
                         
                         cursor-pointer'>
                             Privacy Policy
                         </div>
                     </Link></div>
-            </div>
+        </div>
         </div>
 
     </footer>

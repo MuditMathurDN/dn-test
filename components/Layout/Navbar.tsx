@@ -23,7 +23,7 @@ const Navbar = ({posts}:any) => {
                      left-0
                     bg-[#F5F5F5] text-black
                     `}>
-            <div className='h-[70px] md:h-[90px]  max-w-[1600px]    
+            <div className='h-[70px] md:h-[90px]  max-w-[1800px] border-b   
              flex items-center justify-between  md:justify-center  md:mx-auto md:pl-20
              '>
                 <div className={` h-full `}>

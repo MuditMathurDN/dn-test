@@ -9,8 +9,8 @@ export default function Document() {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet"></link>
-      <link href='/fonts/Helvetica.ttf' />
-      <link href='/fonts/Helvetica-Bold.ttf' />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'></link>
       <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=G-DLKMD4E44H`}
@@ -30,7 +30,7 @@ export default function Document() {
       </Head>
       <body 
     
-      className='overflow-x-hidden snap-y font-helvetica'>
+      className='overflow-x-hidden snap-y'>
         <Main />
         <NextScript />
       </body>

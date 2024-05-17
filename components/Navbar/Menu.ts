@@ -1,6 +1,6 @@
 export const ProductMenu =[
     {
-        title:"MultiClass & MultiLabel",
+        title:"Multiclass & Multilabel",
         text:"Speed/Effort/Accuracy Related",
         link:"/products/classification"
     },

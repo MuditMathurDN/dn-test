@@ -16,7 +16,7 @@ const cards  =[{
     text:"Optimize your AI models effortlessly with our platform's advanced features for model fine-tuning and model training."
 },{
     image:'whycomp/WDN4.gif',
-    title:"Automated model deployment & inferencing:",
+    title:"Auto model deployment & inferencing:",
     text:"Deploy your trained/fine-tuned models automatically for making predictions or integrate with your use case."
 }]
 

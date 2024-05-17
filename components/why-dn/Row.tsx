@@ -21,6 +21,8 @@ export const RowItem = ({content,reverse}:{content:Content,reverse:boolean})=>{
         className={`flex
     flex-col md:flex-row
     items-center justify-between 
+    
+    
      ${reverse && "md:flex-row-reverse"}
     `}>
 
@@ -28,7 +30,8 @@ export const RowItem = ({content,reverse}:{content:Content,reverse:boolean})=>{
     images={content.images}
     />
 
-    <div className={`w-full md:w-[40%] space-y-4 mt-10 px-2 ${reverse?"md:ml-24":"md:mr-20"}`}>
+    <div className={`w-full md:w-[40%] space-y-4 mt-10 px-2 
+    ${reverse?"md:ml-24":"md:mr-20"}`}>
         <h2 className="text-primaryBlue 
         text-[18px] md:text-[2.2vw] lg:text-[24px] font-bold">
             {content.heading}
@@ -36,7 +39,7 @@ export const RowItem = ({content,reverse}:{content:Content,reverse:boolean})=>{
         <p
             className="text-textGray whitespace-pre-wrap
              text-sm md:text-[1.4vw] 
-             tracking-tight lg:text-[16px]"
+              lg:text-[16px]"
         >
             {content.content}
         </p>
@@ -59,15 +62,13 @@ export const ImageContainer = ({images}:{images:string[]}) => {
 const Row = ({children,height="lg"}:Props) => {
 
     return (<div
-    style={{
-        fontFamily:"Roboto"
-    }}
+    
         className={`bg-bgGray my-4
     flex items-center justify-center
     ${height=="lg"?"h-[100vh] max-h-[880px]":"h-[70vh] max-h-[540px]"} 
     w-full relative`}
     >
-        <div className="hidden md:block absolute h-[90%] w-[90%]
+        <div className="hidden md:block absolute h-[90%] w-[100%]
                 bg-[#EFEFEF] rounded-md z-[1]  "
         />
 

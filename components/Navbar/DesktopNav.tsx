@@ -125,7 +125,7 @@ const DesktopNav = ({ posts }: any) => {
             href={link}
         ><a
             className='text-decorator-none 
-            text-[1.2vw] 2xl:text-[24px]'
+            text-[1.35vw] 2xl:text-[30px]'
             target={target ? target : undefined}>
                 {text}</a></Link>
 
@@ -141,7 +141,7 @@ const DesktopNav = ({ posts }: any) => {
              ref={navRef}
             className='absolute bg-[#E7E7E7] 
             w-[17vw] 
-            right-0 top-[100%] rounded-md
+            -right-[5vw] top-[100%] rounded-md
             py-4 drop-shadow-md
             '
             >
@@ -157,7 +157,7 @@ const DesktopNav = ({ posts }: any) => {
                                 <Link
                                 href={p.link}>
                                 <div
-                            className={`text-center text-[#7A7A7A]
+                            className={`text-start text-text-black
                             text-[13px] 
                             ${i<ProductMenu.length-1 && "border-b-[0.3vh]"}  
                             border-[#DEDEDE] cursor-pointer
@@ -181,7 +181,8 @@ const DesktopNav = ({ posts }: any) => {
 
             <p
                 className=' 
-                text-[1.2vw] 2xl:text-[24px]'
+                text-[1.35vw] 2xl:text-[30px]
+                '
                 
             >{text}
             </p>
@@ -228,11 +229,11 @@ const DesktopNav = ({ posts }: any) => {
                 link={"/why-dataneuron"}
             />
             <NavLink
-                text={"About Us"}
+                text={"About us"}
                 link={"/about"}
             />
             <NavLink
-                text={"Contact Us"}
+                text={"Contact us"}
                 link={"/contact"}
             />
         </div>

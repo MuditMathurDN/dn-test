@@ -79,7 +79,8 @@ return (
   
           
        <section className="overflow-x-hidden w-screen max-w-[1800px] 
-                          md:h-[85vh] 
+                           px-6
+                           mt-[80px]
                           
                           md:mx-auto 
                           ">
@@ -120,12 +121,11 @@ return (
                   className='font-bold  text-start 
                   px-2 md:px-0 text-[14x]  md:text-[3vw]
                   2xl:text-[48px] 
-                  text-text-black font-[roboto]'
+                  text-text-black '
                   >{subheading}</h2>
-
                   
                   <p 
-                  className= {`text-left  mt-[30px] !font-roboto
+                  className= {`text-left  mt-[30px] 
                                   text-[16px] md:text-2xl 
                                   xl:w-[75%] ${paraStyles || ""} `}>
                                     {description}
@@ -173,10 +173,12 @@ export default function WhyDN({ posts }: any) {
 
       <Container
 
-        styles='bg-bgGray space-y-12'>
+        styles='my-8 bg-bgGray space-y-12'>
         <h2
           className='text-text-black 
+          
            md:text-[24px] 
+           px-6
           md:-mt-12 md:mb-12'>
           Wonder why we are better than the rest?
         </h2>

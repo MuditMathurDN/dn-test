@@ -48,7 +48,8 @@ const Page3: React.FC = () => {
         // custom-font-IBMPlexMono
         <section className=' '>
            <h2 
-           className='text-[14px] md:text-[35px] font-bold
+           className='text-[14px] md:text-[35px] 
+           font-semibold
            text-text-black
            '>
            90% less effort, <br/>more focus on what matters!

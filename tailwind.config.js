@@ -7,11 +7,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-   
     fontFamily:{
       inter:['Inter','san-serif',],
-      roboto:['Roboto','san-serif'],
-      helvetica:['Helvetica','san-serif']
+      'roboto': ['Roboto', 'sans-serif'],
     },
   
     extend: {

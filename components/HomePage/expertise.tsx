@@ -13,7 +13,7 @@ const data = [{
     text: 'Save time, boost accuracy, and cut costs all in one platform.',
     href: "#save-time"
 }, {
-    text: 'Introducing DataNeuron DSEAL: Precision annotation.',
+    text: 'Introducing DataNeuron DSEAL: precision annotation.',
     href: "#dseal"
 }
 
@@ -26,7 +26,7 @@ const Expertise = () => {
     return (
             <>
             <div
-                className="text-text- font-bold 
+                className="text-text- font-semibold 
             flex items-start justify-between
             border-b border-b-3 border-[#DEDEDE]
             pb-8 md:pb-14
@@ -35,7 +35,7 @@ const Expertise = () => {
                 <h1
                     className="text-[12px] md:text-[35px]"
                 >
-                    These are our Expertise
+                    These are our expertise -
                     <span className="ml-1 w-[10px] hidden md:inline md:w-[20px] my-1 inline-block h-1 bg-[#555555]"></span>
 
                 </h1>

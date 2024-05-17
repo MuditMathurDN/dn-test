@@ -145,13 +145,13 @@ const Contact: NextPage<Posts> = ({ posts }) => {
             h-full
             leading-[8vh]
             text-[40px] md:text-[5vw] lg:text-[64px] 
-            text-center
+            text-start
             md:my-12 w-full
             '
             >Contact Us</h1>
             <p
             className='
-            text-[16px] md:text-[20px] text-center'
+            text-[16px] md:text-[20px] text-start'
             >Reach out to us today and discover how DataNeuron can transform your LLM data curation and fine-tuning workflows.</p>
 
             <Input 
@@ -187,9 +187,13 @@ const Contact: NextPage<Posts> = ({ posts }) => {
             <button
               className={`self-center lg:self-start 
         text-center mt-4
-        w-[10rem]
-        h-[2.5rem]
-        rounded-full  border-2 border-primaryBlue text-primaryBlue
+        py-2
+        rounded-md
+        bg-primaryBlue
+
+        text-white
+        w-full
+        border-2 border-primaryBlue text-primaryBlue
         ${formik.isSubmitting ? "cursor-default" : " cursor-pointer hover:bg-primaryBlue  hover:text-white "}
         duration-300
         flex justify-center items-center
@@ -258,7 +262,7 @@ const Contact: NextPage<Posts> = ({ posts }) => {
               alt="location_icon"
               className='w-6 h-6' />
               <div>
-              Office # 16, M-Block, Amity University, Sector 125,
+              Office # 16, M-Block,<br /> Amity University, Sector 125,
               Noida - 201301
               </div>
             </div>
@@ -271,7 +275,7 @@ const Contact: NextPage<Posts> = ({ posts }) => {
               alt="location_icon"
               className='w-6 h-6' />
               <div>
-                HQ - 355 Bryant Street, Suite # 403, San Francisco CA 94107
+                HQ - 355 Bryant Street,<br /> Suite # 403, San Francisco CA 94107
               </div>
             </div>
           </div>

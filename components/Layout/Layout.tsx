@@ -139,7 +139,7 @@ const Layout: React.FC<Partial<LayoutProps>> = ({ children, title, description, 
             <section className='flex flex-col w-screen max-h-screen bg-[#F5F5F5] '>
              
                 <Navbar posts={  posts && posts[0]} />
-                <section className='z-1 font-[helvetica] mt-[8vh] md:mt-[10vh] bg-bgGray'>
+                <section className='z-1 mt-[8vh] md:mt-[10vh] bg-bgGray'>
                     {children}
                 </section>
                 <Footer />

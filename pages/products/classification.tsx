@@ -79,7 +79,7 @@ export default function classification({posts}:any) {
             <Header
             subheading=''
             heading='Multiclass/ Multilabel '
-            description='AI-Automated Data labeling platform.'
+            description='Build classification models with advanced workflows for automated data annotation and model training using DataNeuron.'
 
             imageUrl='/covers/classification_cover.svg'
             paraStyles=''

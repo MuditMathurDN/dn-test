@@ -8,17 +8,6 @@ import { useEffect, useRef } from 'react';
 import Tag from '../components/Tags/Tag';
 import Container from './products/Container';
 
-// @ts-ignore
-// export async function getStaticProps({ params, preview = false }) {
-//   let appPosts = await getAllGhostPosts();
- 
-
-//   return {
-//     props: {
-//       posts: appPosts || [],
-//     },
-//   };
-// }
 interface Posts {
   posts: any;
   caseStudy: Array<any>;
@@ -49,7 +38,7 @@ const About= ({ posts }:any) => {
         >
           <h1
           className='text-[16px] md:text-[32px] 
-          text-textGray font-bold
+          text-text-black font-bold
           w-[80%] md:w-[60%]
           '
           >
@@ -59,7 +48,7 @@ const About= ({ posts }:any) => {
 
           <div className='flex justify-between items-start'>
             <div
-            className='text-[14px] md:text-[20px] w-[40%] text-textGray
+            className='text-[14px] md:text-[20px] w-[40%] text-text-black
             font-bold
             '
             >Mission . Vision
@@ -68,13 +57,13 @@ const About= ({ posts }:any) => {
             className='w-[60%]'
             > 
               <h2
-              className='text-textGray 
+              className='text-text=black 
               text-[14px] md:text-[24px] font-bold
               w-[90%]
               '
               >Simplifying LLM/NLP workflows for global transformation with innovative AI.</h2>
               <p
-              className='text-[12px] md:text-[18px] text-textGray
+              className='text-[12px] md:text-[18px] text-text-black
               text-start tracking-[0.05px]'
               >Our mission at DataNeuron is to empower businesses and data scientists with advanced AI automation tools that optimize the entire NLP lifecycle. We are committed to delivering 
               high-quality training data, accelerating model development, and facilitating seamless deployment, ultimately helping our clients unlock the full potential of NLP technology.</p>
@@ -86,7 +75,7 @@ const About= ({ posts }:any) => {
           >
           <h1
           className='text-[14px] md:text-[32px] 
-          text-textGray font-bold
+          text-text-black font-bold
           w-[60%]
           '
           >
@@ -119,7 +108,7 @@ const Page2: React.FC = () => {
       name: 'Bharath Rao',
       des:["Founder/CEO"],
       href: "https://www.linkedin.com/in/bharrao/",
-      content: ["Founder/CEO, Precily AI, Forbes 30 Under 30"]
+      content: ["Forbes 30 Under 30"]
     },
     {
       id: 1,
@@ -158,46 +147,47 @@ const Page2: React.FC = () => {
   
     return <motion.div
      
-      className={`flex justify-center`}
+      className={`flex justify-start w-full`}
     >
       <Wrapper
         link={href}
       >
         <div
           className='flex flex-col
-          justify-start items-center space-y-2 
-          
-          h-[15rem] 
+          justify-start items-start space-y-2 
+          text-left
+          md:h-[15rem] 
           text-[12px] md:text-2xl
          
            duration-300'
-        >
+           >
           <p 
-          className='font-medium text-primaryBlue
+          className='text-[12px] md:text-[32px] font-semibold 
+          text-primaryBlue
           '>
             {name}
           </p>
           {
             des.map((d)=>  <p 
-            className='font-medium text-textGray
+            className='text-[10px] md:text-[24px] font-medium text-text-black
             '>
               {d}
             </p>)
           }
         
-          <div
+          {/* <div
             className='flex flex-col 
-            justify-center items-center 
-            text-lightGray 
-             text-[12px] md:text-[16px] text-center
-            
+            justify-center items-start 
+            text-text-black 
+             text-[12px] md:text-[16px]
+              pr-4
             '
           >
-                <p className='w-1/2 md:w-full'>
+                <p className=''>
                   {content}
                 </p>
              
-          </div>
+          </div> */}
         </div>
       </Wrapper>
     </motion.div>
@@ -206,7 +196,7 @@ const Page2: React.FC = () => {
     src: string;
     id: number;
   }
-  const sponsorImages: Array<string> = ["/windrose.png", "/inventus.png","/bright-phoenix.png", "/others.png"];
+  const sponsorImages: Array<string> = ["/windrose.png","/bright-phoenix.png", "/inventus.png", "/others.png"];
   const Sponsors: React.FC<SponsorProps> = ({ src, id }) => {
   
     return <motion.img
@@ -216,14 +206,16 @@ const Page2: React.FC = () => {
       className='full mix-blend-darken'
     />
   }
-  return <div className=' flex-col flex-reverse justify-center items-center 
-  font-[poppins] py-16 
+  return <div className=' flex-col flex-reverse 
+  justify-center items-start
+  py-16 
   space-y-12 bg-bgGray' >
-    <div className='space-y-10'>
+    <div className='space-y-10 '>
       <div className='grid 
       overflow-x-hidden
-           grid-cols-2 lg:grid-cols-3 
-          xl:gap-8 gap-4 mx-auto
+           grid-cols-3 md:grid-cols-3 lg:grid-cols-3 
+          justify-items-center
+           xl:gap-8 gap-8 
           lg:w-[60rem] xl:w-[68rem] md:w-[41rem]'
       >
         {
